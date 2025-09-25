@@ -46,7 +46,33 @@ section {
   margin-bottom: 10px;
 }
 
-.hero.img {
+.contact-info {
+  margin-top: 10px;
+  color: #6F4E37;
+  position: relative;
+  z-index: 10; 
+}
+
+.contact-info p {
+  margin: 3px 0;
+  font-size: 12px;
+  color: #C19A6B;
+  text-decoration: underline;
+}
+
+.contact-info a {
+  color: #6F4E37;        /* warna link sesuai tema portofolio */
+  text-decoration: none; /* hilangkan underline default */
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  color: #C19A6B;        /* warna saat hover */
+  text-decoration: underline; /* opsional */
+}
+
+
+.hero-img {
   background: #C19A6B;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -96,23 +122,26 @@ section {
   text-align: center;
   padding: 50px 20px;
   background: rgb(252, 251, 250);
+  display: block;
 }
 
-.project-title {
-  text-align: center;
+.project-tittle {
   margin-bottom: 40px;
   width: 100%;
 }
 
-.project-title h1 {
-  display: inline-block;
-  background-color: #EAD9B0; /* warna selaras dengan Tentang Saya */
-  padding: 15px 40px;
-  border-radius: 15px;
+.project-tittle h1 {
+  display: block;
+  width: 100%;                /* full kanan-kiri */
+  background-color: #EAD9B0;  /* cream */
   color: #6F4E37;
   font-size: 28px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* biar sama dengan box about */
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;             /* tipis aja biar lurus */
+  margin: 0;
 }
+
 
 .project-box {
   display: flex;
@@ -171,6 +200,7 @@ section {
   top: 20px;
   right: 40px;
   background: none;
+  z-index: 1000;       
 }
 
 /* jejer samping */
@@ -189,4 +219,25 @@ section {
 
 .navbar a:hover {
   color: #c79d5f;
+}
+
+footer {
+  background-color: #EAD9B0;
+  color: #6F4E37;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
